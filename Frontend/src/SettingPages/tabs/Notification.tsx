@@ -213,7 +213,7 @@ export const Notification = () => {
         </div>
 
         <div className="Delivery-row">
-            <span>Achievement Milestones</span>
+            <span>Notify Me!!!</span>
             <label className ="Switch">
                 <input type="checkbox" checked={achievements} onChange={() => handleToggle(setAchievements, 'Achievement milestones')} />
                 <span className="slider round"></span>
