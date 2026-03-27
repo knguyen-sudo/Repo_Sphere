@@ -144,14 +144,14 @@ export const Account = () => {
             {/* Personal Form Content: Personal Info */}
             <div className ="Personal-contents">
                 <div className="form-row">
-                    <h2>Username</h2>
+                    <h2>Name</h2>
                         <div className="Username-inputs">
                         <input 
                             type="text" 
                             style={{ width: '400px', height: '40px', padding: '8px' }} 
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            placeholder="Enter your username" 
+                            placeholder="Enter your name" 
                         />
                     </div>
                 </div>

@@ -10,6 +10,7 @@ export const Notification = () => {
   const [issues, setIssues] = useState(true);
   const [merge, setMerge] = useState(true);
   const [pullRequests, setPullRequests] = useState(true);
+    const [achievements, setAchievements] = useState(true);
   const [email, setEmail] = useState(true);
   const [inApp, setInApp] = useState(true);
   const [quietStart, setQuietStart] = useState('22:00');
@@ -21,6 +22,7 @@ export const Notification = () => {
     issues: true,
     merge: true,
     pullRequests: true,
+    achievements: true,
     email: true,
     inApp: true,
     quietStart: '22:00',
@@ -63,6 +65,7 @@ export const Notification = () => {
       issues,
       merge,
       pullRequests,
+    achievements,
       email,
       inApp,
       quietStart,
@@ -81,6 +84,7 @@ export const Notification = () => {
     setIssues(originalSettings.issues);
     setMerge(originalSettings.merge);
     setPullRequests(originalSettings.pullRequests);
+    setAchievements(originalSettings.achievements);
     setEmail(originalSettings.email);
     setInApp(originalSettings.inApp);
     setQuietStart(originalSettings.quietStart);
@@ -98,6 +102,7 @@ export const Notification = () => {
       setIssues(data.issues ?? true);
       setMerge(data.merge ?? true);
       setPullRequests(data.pullRequests ?? true);
+    setAchievements(data.achievements ?? true);
       setEmail(data.email ?? true);
       setInApp(data.inApp ?? true);
       setQuietStart(data.quietStart ?? '22:00');
@@ -109,6 +114,7 @@ export const Notification = () => {
         issues: data.issues ?? true,
         merge: data.merge ?? true,
         pullRequests: data.pullRequests ?? true,
+        achievements: data.achievements ?? true,
         email: data.email ?? true,
         inApp: data.inApp ?? true,
         quietStart: data.quietStart ?? '22:00',
@@ -204,6 +210,14 @@ export const Notification = () => {
         <div className="Achivements-preferences">
             <h3>Achievements</h3>
             <p>Get notified each time you reach to your milestones </p>
+        </div>
+
+        <div className="Delivery-row">
+            <span>Achievement Milestones</span>
+            <label className ="Switch">
+                <input type="checkbox" checked={achievements} onChange={() => handleToggle(setAchievements, 'Achievement milestones')} />
+                <span className="slider round"></span>
+            </label>
         </div>
 
 
